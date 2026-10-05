@@ -10,61 +10,20 @@ export const BrandLockup: React.FC<BrandLockupProps> = ({
   scriptText = 'for life',
 }) => {
   return (
-    <div className="relative inline-flex items-center justify-center my-3 sm:my-4 select-none">
-      <svg
-        viewBox="0 0 620 160"
-        className="w-[310px] sm:w-[480px] md:w-[560px] lg:w-[620px] h-auto overflow-visible drop-shadow-2xl"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="amberPillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#F59E0B" />
-            <stop offset="50%" stopColor="#E58B20" />
-            <stop offset="100%" stopColor="#D97706" />
-          </linearGradient>
-        </defs>
+    <div className="relative inline-flex items-center justify-center my-2 sm:my-3 select-none">
+      <div className="relative flex items-center">
+        {/* Warm Amber Badge Capsule */}
+        <div className="flex items-center bg-gradient-to-r from-[#F59E0B] via-[#E58B20] to-[#D97706] rounded-full px-5 sm:px-7 py-2 sm:py-2.5 shadow-xl border border-amber-300/30">
+          <span className="font-kaisei font-bold tracking-[0.08em] text-white text-base sm:text-xl md:text-2xl uppercase drop-shadow-sm">
+            {title}
+          </span>
+        </div>
 
-        {/* Background Warm Amber Pill Bar */}
-        <rect
-          x="40"
-          y="58"
-          width="540"
-          height="54"
-          rx="27"
-          fill="url(#amberPillGrad)"
-        />
-
-        {/* Left Bold Serif Text: White Font */}
-        <text
-          x="75"
-          y="95"
-          fontFamily="'Playfair Display', Georgia, serif"
-          fontSize="36"
-          fontWeight="800"
-          letterSpacing="0.06em"
-          fill="#ffffff"
-        >
-          {title}
-        </text>
-
-        {/* Cursive Script Text: for life in White Font with subtle shadow */}
-        <g transform="translate(325, 0)">
-          <text
-            x="30"
-            y="108"
-            fontFamily="'Alex Brush', 'Dancing Script', cursive"
-            fontSize="98"
-            fontWeight="400"
-            fill="#ffffff"
-            stroke="#ffffff"
-            strokeWidth="1.2"
-            letterSpacing="0.02em"
-          >
-            {scriptText}
-          </text>
-        </g>
-      </svg>
+        {/* Cursive overlapping 'for life' in crisp script */}
+        <span className="font-script text-3xl sm:text-4xl md:text-5xl text-white font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] -ml-4 sm:-ml-5 -mt-3 sm:-mt-4 transform -rotate-6 z-10">
+          {scriptText}
+        </span>
+      </div>
     </div>
   );
 };
