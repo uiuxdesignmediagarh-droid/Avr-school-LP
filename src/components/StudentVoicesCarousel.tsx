@@ -54,11 +54,11 @@ export const StudentVoicesCarousel: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#180e0c] text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-12 font-dmsans overflow-hidden border-t border-neutral-800">
+    <section className="relative w-full bg-[#FAF5EE] text-[#2D1418] py-20 sm:py-28 px-4 sm:px-6 lg:px-12 font-dmsans overflow-hidden border-t border-[#E8DCCF]">
       
-      {/* Background Glows */}
+      {/* Background Soft Amber and Rosé Glows */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#E58B20]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#4A0D15]/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#7A1C28]/8 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         
@@ -67,18 +67,18 @@ export const StudentVoicesCarousel: React.FC = () => {
           <div className="text-left max-w-2xl">
             
             {/* AmberZine Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E58B20]/15 border border-[#E58B20]/30 text-[#FDE68A] text-xs font-semibold tracking-[0.16em] uppercase mb-4">
-              <BookOpen className="w-3.5 h-3.5 text-[#E58B20]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF8EE] border border-[#E8DCCF] text-[#B45309] text-xs font-bold tracking-[0.16em] uppercase mb-4 shadow-xs">
+              <BookOpen className="w-3.5 h-3.5 text-[#D97706]" />
               <span>AmberZine • Student Voices</span>
             </div>
 
             {/* Main Heading in Kaisei Opti */}
-            <h2 className="font-kaisei font-bold text-3xl sm:text-4xl lg:text-[46px] text-white tracking-tight leading-[1.16] mb-3">
+            <h2 className="font-kaisei font-bold text-3xl sm:text-4xl lg:text-[46px] text-[#4A0E17] tracking-tight leading-[1.16] mb-3">
               Hear It From Our Students
             </h2>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-neutral-300 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-[#525252] font-normal leading-relaxed">
               Real experiences. Real stories. Real voices from the students who live and learn at Amber Valley every day.
             </p>
           </div>
@@ -87,22 +87,22 @@ export const StudentVoicesCarousel: React.FC = () => {
           <div className="flex items-center gap-3 self-start md:self-end">
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors cursor-pointer"
+              className="p-2.5 rounded-full bg-white hover:bg-neutral-50 border border-neutral-200 text-[#4A0E17] shadow-sm transition-colors cursor-pointer"
               aria-label={isPlaying ? 'Pause auto-scroll' : 'Play auto-scroll'}
               title={isPlaying ? 'Pause Carousel' : 'Auto Play'}
             >
-              {isPlaying ? <Pause className="w-4 h-4 text-[#FDE68A]" /> : <Play className="w-4 h-4 text-white" />}
+              {isPlaying ? <Pause className="w-4 h-4 text-[#B45309]" /> : <Play className="w-4 h-4 text-[#4A0E17]" />}
             </button>
             <button
               onClick={() => scroll('left')}
-              className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors cursor-pointer"
+              className="p-2.5 rounded-full bg-white hover:bg-neutral-50 border border-neutral-200 text-[#4A0E17] shadow-sm transition-colors cursor-pointer"
               aria-label="Previous reel"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white transition-colors cursor-pointer"
+              className="p-2.5 rounded-full bg-white hover:bg-neutral-50 border border-neutral-200 text-[#4A0E17] shadow-sm transition-colors cursor-pointer"
               aria-label="Next reel"
             >
               <ChevronRight className="w-5 h-5" />
@@ -122,7 +122,7 @@ export const StudentVoicesCarousel: React.FC = () => {
             <div
               key={`${item.id}-${idx}`}
               onClick={() => setActiveReel(item)}
-              className="snap-start shrink-0 w-[170px] sm:w-[210px] md:w-[230px] aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden relative group cursor-pointer border border-white/15 hover:border-[#E58B20] shadow-xl hover:shadow-[#E58B20]/20 transition-all duration-300 hover:-translate-y-2 bg-neutral-900"
+              className="snap-start shrink-0 w-[170px] sm:w-[210px] md:w-[230px] aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden relative group cursor-pointer border-2 border-white shadow-lg hover:shadow-2xl hover:border-[#D97706] transition-all duration-300 hover:-translate-y-2 bg-neutral-900"
             >
               {/* Vertical Reel Thumbnail Image */}
               <img
@@ -136,7 +136,7 @@ export const StudentVoicesCarousel: React.FC = () => {
 
               {/* Center Play Icon Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-black/50 backdrop-blur-md border border-white/25 text-white flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E58B20] group-hover:text-[#4A0D15] group-hover:border-[#E58B20] transition-all duration-300 shadow-lg">
+                <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white/70 backdrop-blur-md border border-white/60 text-[#4A0D15] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E58B20] group-hover:text-white transition-all duration-300 shadow-xl">
                   <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" />
                 </div>
               </div>
@@ -154,7 +154,7 @@ export const StudentVoicesCarousel: React.FC = () => {
       {/* Reel Modal Player */}
       {activeReel && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-in fade-in duration-200"
           onClick={() => setActiveReel(null)}
         >
           <div 
