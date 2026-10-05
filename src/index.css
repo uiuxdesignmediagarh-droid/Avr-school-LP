@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+
+  h1 {
+    font-family: 'Kaisei Opti', serif, sans-serif;
+    font-weight: 700;
+  }
+
+  p {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+.font-kaisei {
+  font-family: 'Kaisei Opti', serif, sans-serif;
+}
+
+.font-dmsans {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-p22 {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-serif-hero {
+  font-family: 'Kaisei Opti', serif, sans-serif;
+}
+
+.font-script {
+  font-family: 'Alex Brush', 'Dancing Script', cursive;
+}
+
+.font-display-crest {
+  font-family: 'Cinzel', serif;
+}
+
+/* Glassmorphism effects */
+.glass-nav {
+  background: rgba(20, 26, 38, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card {
+  background: rgba(45, 38, 35, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-icon-btn {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
